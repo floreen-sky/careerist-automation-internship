@@ -44,3 +44,18 @@ def close_quick_view(context):
 @then('Add Item to Cart')
 def add_item_to_cart(context):
     context.app.category_page_iphone.add_item_to_cart()
+
+
+@when('Hover on Watch from Main Menu')
+def hover_watch_menu(context):
+    context.app.category_page_watch.hover_watch_menu()
+
+
+@then('User can see all Items from dropdown Menu')
+def verify_items_watch_dropdown(context):
+    context.app.category_page_watch.verify_items_watch_dropdown()
+
+
+@then('Verify if all Items open the correct Page')
+def open_items_and_verify(context):
+    context.app.category_page_watch.open_items_and_verify()

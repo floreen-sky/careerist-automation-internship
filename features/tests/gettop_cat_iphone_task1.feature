@@ -1,5 +1,5 @@
 # Created by Flo at 4/5/2021
-Feature: GetTop Category Page
+Feature: GetTop Category Page - iPhone
 
   Scenario: Verify items to correct category
     Given Open GetTop Page

@@ -22,7 +22,11 @@ class Page:
 
     def verify_text(self, expected_text: str, *locator):
         actual_text = self.driver.find_element(*locator).text
-        assert expected_text == actual_text, f'Expected {expected_text} does not match actual {actual_text}'
+        assert expected_text == actual_text, f'Expected {expected_text} instead got {actual_text}'
+
+    def verify_text_in(self, expected_text: str, *locator):
+        actual_text = self.driver.find_element(*locator).text
+        assert expected_text in actual_text, f'Expected {expected_text} instead got {actual_text}'
 
     def hover_object(self, *locator):
         o = self.driver.find_element(*locator)
